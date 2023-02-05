@@ -74,10 +74,13 @@ img {
   width: 30%;
 }
 
-#todoList {
+#todoListContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#todoList {
   color: rgb(44, 44, 45);
   list-style: none;
   font-size: 20px;
@@ -94,4 +97,13 @@ img {
   text-decoration: none;
   display: inline-block;
   font-size: 10px;
+}
+#todoList li span {
+  display: inline-block;
+  width: 200px;
+}
+
+#todoList ul {
+  display: flex;
+  flex-direction: column;
 }
