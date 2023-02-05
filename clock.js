@@ -1,5 +1,9 @@
 const time = document.querySelector(".time");
 
-const now = new Date();
+let today = new Date();
+let hours = String(today.getHours()).padStart(2, "0");
+let minutes = String(today.getMinutes()).padStart(2, "0");
+let seconds = String(today.getSeconds()).padStart(2, "0");
 
-time.innerHTML = now;
+let displayTime = `${hours}:${minutes}:${seconds}`;
+time.innerHTML = displayTime;
