@@ -5,48 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kai's Chrome App</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="background">
-      <!-- background change -->
-      <div class="changeBackgroundImg"><button>change</button></div>
-
-      <!-- display local time -->
-      <div class="time"></div>
-
-      <!-- display date -->
-      <div class="date"></div>
-
-      <!-- display location and weather -->
-      <div id="weather">
-        <span></span>
-        <span></span>
-      </div>
-
-      <!-- login -->
-      <div class="login">
-        <form>
-          <div>
-            <input type="text" placeholder="what is your name?" />
-            <input type="submit" value="LOG IN" />
-          </div>
-        </form>
-
-        <!-- display username using local storage -->
-        <div class="greeting"></div>
-      </div>
-      <!-- todo list -->
-      <div class="todoList">
-        <form id="todoForm">
-          <input type="text" placeholder="Write a To Do and Press Enter" />
-        </form>
-        <ul id="todoList"></ul>
-      </div>
+    <!-- display location and weather -->
+    <div id="weather">
+      <span></span>
+      <span></span>
     </div>
+    <!-- display local time -->
+    <div class="time"></div>
+
+    <!-- login -->
+    <div class="login">
+      <form class="hidden" id="loginForm">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="what is your name?"
+        />
+        <input type="submit" value="LOG IN" />
+      </form>
+
+      <!-- display username using local storage -->
+      <div class="greeting hidden"></div>
+    </div>
+    <!-- todo list -->
+    <div class="todoList">
+      <form id="todoForm">
+        <input type="text" placeholder="Write a To Do and Press Enter" />
+      </form>
+      <ul id="todoList"></ul>
+    </div>
+
     <script src="login.js"></script>
     <script src="clock.js"></script>
     <script src="background.js"></script>
-    <script src="background.js"></script>
+
     <script src="todo.js"></script>
     <script src="weather.js"></script>
   </body>
